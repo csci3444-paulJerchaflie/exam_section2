@@ -1,7 +1,7 @@
 module.exports = {
 
     /**
-     * @return number square of inpNumber or NaN if invalid input
+     * @return number cube of inpNumber or NaN if invalid input
      */
     toCube: function(inpNumber) {
 
