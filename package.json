@@ -1,34 +1,41 @@
 {
-  "name": "exam_section_2",
-  "version": "1.0.0",
-  "description": "Part two of take home exam",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/csci3444-paulJerchaflie/exam_section_2.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/csci3444-paulJerchaflie/exam_section_2/issues"
-  },
-  "homepage": "https://github.com/csci3444-paulJerchaflie/exam_section_2#readme",
-  "dependencies": {
-    "ejs": "^2.5.7",
-    "express": "^4.16.2"
-  },
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "istanbul": "^0.4.5",
-    "mocha": "^4.0.1",
-    "nodemon": "^1.12.1",
-    "nyc": "^11.3.0"
-  }
+    "name": "exam_section_2",
+    "version": "1.0.0",
+    "description": "Part two of take home exam",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "startThing": "nodemon ./src/main_webServer.js",
+        "testThingMocha": "mocha --recursive",
+        "testAndCoverage_via_nyc": "nyc mocha --recursive",
+        "testAndCoverage_via_istanbul": "istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive",
+        "testAndCoverage": "npm run testAndCoverage_via_istanbul && npm run testAndCoverage_via_nyc",
+        "openCoverageReport_inBrowser": "opn coverage/lcov-report/index.html",
+        "openCoverageReport": "npm run openCoverageReport_inBrowser",
+        "testAndCoverageAndReport": "npm run testAndCoverage && npm run openCoverageReport"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/csci3444-paulJerchaflie/exam_section_2.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/csci3444-paulJerchaflie/exam_section_2/issues"
+    },
+    "homepage": "https://github.com/csci3444-paulJerchaflie/exam_section_2#readme",
+    "dependencies": {
+        "ejs": "^2.5.7",
+        "express": "^4.16.2"
+    },
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "istanbul": "^0.4.5",
+        "mocha": "^4.0.1",
+        "nodemon": "^1.12.1",
+        "nyc": "^11.3.0"
+    }
 }

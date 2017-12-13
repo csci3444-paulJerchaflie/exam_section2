@@ -9,10 +9,10 @@ module.exports = {
         // get num1
         if (typeof inpNumber === "number") {
             num1 = inpNumber;
-        } else if (typeof inpNumber1 === "string" && Number(inpNumber1) === "number") {
-            num1 = Number(inpNumber1);
+        } else {
+            num1 = Number(inpNumber);
         }
 
-        return Math.pow(num1, 3);
+        return (num1 * num1 * num1);
     }
 }
